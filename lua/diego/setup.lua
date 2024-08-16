@@ -2,7 +2,6 @@ vim.cmd[[colorscheme tokyonight]]
 vim.g.lightline = { colorscheme = 'grubvox' }
 
 vim.opt.cursorline    = true
-vim.opt.mouse         = a
 
 vim.opt.number        = true
 
@@ -29,6 +28,11 @@ vim.opt.scrolloff     = 8
 vim.api.nvim_create_autocmd("BufNewFile", {
     pattern = "Makefile",
     command = "0r ~/.config/nvim/templates/Makefile"
+})
+
+vim.api.nvim_create_autocmd("BufNewFile", {
+    pattern = "main.cpp",
+    command = "0r ~/.config/nvim/templates/main.cpp"
 })
 
 
